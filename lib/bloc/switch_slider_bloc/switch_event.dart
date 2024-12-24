@@ -7,7 +7,13 @@ abstract class SwitchEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class SwitchedClass extends SwitchEvent {}
+class SwitchedClass extends SwitchEvent {
+  bool isSwitch;
+  SwitchedClass({required this.isSwitch});
+
+  @override
+  List<Object> get props => [isSwitch];
+}
 
 // ignore: must_be_immutable
 class SliderClass extends SwitchEvent {
